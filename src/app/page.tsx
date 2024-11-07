@@ -1,6 +1,8 @@
 // app/page.tsx
 import Image from "next/image";
 import bg from "../../public/background/home-background.png";
+import RenderModel from "../components/RenderModel";
+import Computer from "../components/models/Computer";
 
 
 export default function Home() {
@@ -15,6 +17,15 @@ export default function Home() {
         className="-z-50 w-full h-full object-cover object-center opacity-50"
       />
       
+      <div className="w-full h-screen">
+        
+        <RenderModel  className=""  >
+          <Computer />
+        </RenderModel>
+      </div>
+  
+
+
     </main>
   );
 }
