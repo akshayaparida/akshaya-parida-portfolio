@@ -29,16 +29,27 @@ module.exports = {
         'spin-reverse': {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(-360deg)' }
-        }
+        },
+        fadeInFloat: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        fadeInUp: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         'spin-slow': 'spin 40s linear infinite',
         'spin-slow-reverse': 'spin-reverse 40s linear infinite',
+        fadeInFloat: "fadeInFloat 1s ease-in-out",
+        fadeInUp: "fadeInUp 1s ease-out",
       },
       screens: {
         xs: '480px',
       }
     },
   },
+
   plugins: [],
 };

@@ -1,3 +1,4 @@
+// src/app/page.tsx
 import Image from "next/image";
 import bg from "../../public/background/home-background.png";
 import RenderModel from "../components/RenderModel";
@@ -5,7 +6,10 @@ import Computer from "../components/models/Computer";
 import Navigation from "../components/navigation";
 import Header from "../components/Header";
 
-export default function Home() {
+export default async function Home() {
+  // Fetch current date on the server-side
+  const currentDate = new Date().toLocaleDateString();
+  
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative">
       {/* Background Image */}
@@ -19,9 +23,10 @@ export default function Home() {
 
       {/* Model and Navigation Container */}
       <div className="w-full h-screen flex flex-col items-center justify-center">
+        {/* Pass currentDate as a prop to Header */}
+        <Header currentDate={currentDate} />
+        
         {/* 3D Model */}
-
-<Header/>
         <RenderModel className="">
           <Computer />
         </RenderModel>
