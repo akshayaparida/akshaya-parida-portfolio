@@ -1,3 +1,4 @@
+// src/components/Computer.tsx
 "use client"
 
 import React, { useRef } from 'react'
@@ -11,13 +12,13 @@ interface ComputerProps extends GroupProps {
 }
 
 export default function Computer(props: ComputerProps) {
-  const modelRef = useRef<THREE.Group>(null) 
+  const modelRef = useRef<THREE.Group>(null)
 
   const { nodes, materials } = useGLTF('/models/computer.glb')
 
   useFrame((state) => {
     if (modelRef.current) {
-      modelRef.current.position.x = 0.50 + Math.sin(state.clock.elapsedTime) * 0.50
+      modelRef.current.position.x = 0.50 + Math.sin(state.clock.elapsedTime) * 0.70
     }
   })
 

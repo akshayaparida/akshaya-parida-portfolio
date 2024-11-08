@@ -1,3 +1,5 @@
+/* globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,7 +10,8 @@
     --foreground: 225 225 225;
     --muted: 115 115 115;
     --accent: 254 254 91;
-    /* hex value of rgb(254,254,91) color is  #FEFE5B  */
+    /* hex value of rgb(254,254,91) color is #FEFE5B  */
+    --font-texturina: 'Texturina', serif; /* Add Texturina font variable */
   }
 }
 
@@ -29,4 +32,64 @@
   100% {
     transform: translate(100px, 100px);
   }
+}
+
+/* CSS animation for swinging left to right */
+@keyframes swing {
+  0% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+/* Apply the swing animation to the navigation */
+.swing-animation {
+  animation: swing 2s infinite ease-in-out;
+}
+
+@keyframes fadeInFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInFloat {
+  animation: fadeInFloat 2s ease-out forwards;
+}
+
+/* Apply font-texturina */
+.font-texturina {
+  font-family: var(--font-texturina);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#my-modal {
+  /* Modal styles here */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  overflow: hidden;
 }
