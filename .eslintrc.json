@@ -1,25 +1,3 @@
 {
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  },
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:next/recommended"
-  ],
-  "overrides": [
-    {
-      "files": ["next.config.js", "postcss.config.js", "tailwind.config.js"],
-      "parser": "espree",  // Use the default ESLint parser for these files
-      "rules": {
-        // You can add any specific rules you want for these files here
-      }
-    }
-  ],
-  "ignorePatterns": ["node_modules/", ".next/", "out/"],  // Ensure the build directories are ignored
-  "env": {
-    "browser": true,
-    "node": true
-  }
+  "extends": "next/core-web-vitals"
 }
