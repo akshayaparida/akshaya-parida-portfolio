@@ -52,8 +52,8 @@ export const BtnList = [
   { label: "Projects", link: "/projects", icon: Code, newTab: false },
 
   { label: "Contact", 
-    link: "mailto:akshayaparida2811@gmail.com", icon: Mail,
-     newTab: true },
+    link: "/contact", icon: Mail,
+     newTab: false },
   {
     label: "Github",
     link: "https://github.com/akshayaparida",
