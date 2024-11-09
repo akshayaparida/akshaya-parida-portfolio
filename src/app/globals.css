@@ -1,5 +1,6 @@
 /* globals.css */
 
+/* Tailwind base styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,12 +10,12 @@
     --background: 27 27 27;
     --foreground: 225 225 225;
     --muted: 115 115 115;
-    --accent: 254 254 91;
-    /* hex value of rgb(254,254,91) color is #FEFE5B  */
+    --accent: 254 254 91; /* hex value of rgb(254,254,91) color is #FEFE5B */
     --font-texturina: 'Texturina', serif; /* Add Texturina font variable */
   }
 }
 
+/* Custom Utility Classes */
 @layer utilities {
   .pause {
     animation-play-state: paused;
@@ -25,6 +26,7 @@
   }
 }
 
+/* CSS animations */
 @keyframes move {
   0% {
     transform: translate(0, 0);
@@ -34,7 +36,7 @@
   }
 }
 
-/* CSS animation for swinging left to right */
+/* Swing animation for nav */
 @keyframes swing {
   0% {
     transform: translateX(-10px);
@@ -47,11 +49,12 @@
   }
 }
 
-/* Apply the swing animation to the navigation */
+/* Apply swing animation to navigation */
 .swing-animation {
   animation: swing 2s infinite ease-in-out;
 }
 
+/* Fade-in animation */
 @keyframes fadeInFloat {
   0% {
     opacity: 0;
@@ -67,29 +70,34 @@
   }
 }
 
+/* Fade-in animation for components */
 .animate-fadeInFloat {
   animation: fadeInFloat 2s ease-out forwards;
 }
 
-/* Apply font-texturina */
+/* Font styling */
 .font-texturina {
   font-family: var(--font-texturina);
 }
 
-html,
-body {
+/* Ensure the body takes full height and no overflow */
+html, body, #__next {
   height: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-#my-modal {
-  /* Modal styles here */
-}
-
+/* Body styles to maintain layout structure */
 body {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; 
-  overflow: hidden;
+  justify-content: flex-start;
+  overflow-x: hidden; /* Ensure no horizontal scrolling */
+}
+
+/* Example modal styles (uncomment and use when needed) */
+#my-modal {
+  /* Modal styles here */
 }
