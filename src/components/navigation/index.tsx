@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
-import { BtnList } from "@/src/app/data"; 
+import { BtnList } from "@/app/lib/data"; 
 import NavButton from "./NavButton"; 
 
 const Navigation = () => {
@@ -28,7 +28,7 @@ const Navigation = () => {
   }, []);
 
   return (
-    <nav ref={navRef} className="w-full py-2 mb-[4rem] shadow-lg">
+    <nav ref={navRef} className="w-full py-2 mb-[4rem] ">
       <div className="flex items-center justify-center gap-6">
         {BtnList.map((btn, index) => (
           <NavButton

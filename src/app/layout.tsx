@@ -22,7 +22,7 @@ const texturina = Texturina({
 export const metadata = {
   title: {
     template: "Akshaya Parida Portfolio Created with Three.js and Tailwind CSS",
-    default: " Akshaya Parida Next.js Portfolio Created with Three.js and Tailwind CSS",
+    default: " Akshaya Parida Portfolio",
   },
   description:
     "Portfolio designed by Akshaya Parida with cutting-edge technologies like Next.js, Tailwind CSS, Three.js, and Framer Motion. Experience the art of modern web development firsthand.",

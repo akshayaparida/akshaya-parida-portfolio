@@ -1,6 +1,6 @@
 // src/app/page.tsx
 import Image from "next/image";
-import bg from "../../public/background/home-background.png";
+import bg from "../../public/background/home-bg.png";
 import RenderModel from "../components/RenderModel";
 import Computer from "../components/models/Computer";
 import Navigation from "../components/navigation";
@@ -18,7 +18,7 @@ export default async function Home() {
         src={bg}
         alt="background-image"
         fill
-        className="-z-50 w-full h-full object-cover object-center opacity-20"
+        className="-z-50 w-full h-full object-cover  object-center opacity-15"
       />
 
       {/* Model and Navigation Container */}
