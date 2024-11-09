@@ -21,7 +21,7 @@ Websites:
 
 
 // src/app/data.tsx
-import { Home, Info, Code, Github, Linkedin, FileText, Twitter } from "lucide-react"; // Import icons directly
+import { Home, Info, Code, Github, Linkedin, FileText, Twitter, Mail } from "lucide-react"; // Import icons directly
 
 // Projects Data
 export const projectsData = [
@@ -50,7 +50,10 @@ export const BtnList = [
   { label: "Home", link: "/", icon: Home, newTab: false },
   { label: "About", link: "/about", icon: Info, newTab: false },
   { label: "Projects", link: "/projects", icon: Code, newTab: false },
-  { label: "Contact", link: "/contact", icon: FileText, newTab: false },
+
+  { label: "Contact", 
+    link: "mailto:akshayaparida2811@gmail.com", icon: Mail,
+     newTab: true },
   {
     label: "Github",
     link: "https://github.com/akshayaparida",

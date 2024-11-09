@@ -1,7 +1,7 @@
 // src/app/lib/definitions.ts
 
 import { ReactNode } from "react";
-import { LucideProps } from "lucide-react"; // Import the base props for icons
+import { LucideProps } from "lucide-react"; 
 
 // Define the type for the props of SubPagesLayout component
 export interface SubPagesLayoutProps {
@@ -41,3 +41,11 @@ export interface NavButton {
 export interface ButtonListProps {
   buttons: NavButton[];
 }
+
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
