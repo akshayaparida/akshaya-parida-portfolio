@@ -22,9 +22,9 @@ const skills = [
 
 const AboutAndSkills: React.FC = () => {
   return (
-    <section className="w-full max-w-5xl mx-auto  p-6 space-y-16 shadow-xl rounded-lg  flex flex-wrap flex-col justify-between h-screen   ">
+    <section className="w-full max-w-5xl mx-auto  p-5 space-y-16 shadow-xl rounded-lg  flex flex-wrap flex-col justify-between h-screen  ">
       {/* About Me Section */}
-      <div className=" flex-1 overflow-auto   bg-gray-950 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-slate-800">
+      <div className=" flex-1 overflow-auto   bg-gray-950 p-5 mt-8 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-slate-800">
         <h2 className="text-3xl font-mono text-white text-center mb-6">About Me</h2>
         <p className="text-base font-sans  leading-relaxed mb-4 text-white">
           Hi, I&apos;m Akshaya Parida, a passionate developer focused on building modern web applications. I specialize in frontend development. I aim to create user-friendly and responsive websites that deliver exceptional user experiences.
@@ -35,9 +35,9 @@ const AboutAndSkills: React.FC = () => {
       </div>
 
       {/* Skills Section */}
-      <div className=" font-sans bg-gray-950 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-slate-800">
+      <div className=" font-sans bg-gray-950 p-5 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-slate-800">
         <h2 className="text-3xl font-mono text-white text-center mb-6">Skills</h2>
-        <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+        <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
           {skills.map(({ icon, name, color }) => (
             <li key={name} className="flex items-center space-x-2">
               <FontAwesomeIcon icon={icon} className={`h-8 w-8 ${color}`} />
