@@ -22,7 +22,7 @@ const skills = [
 
 const AboutAndSkills: React.FC = () => {
   return (
-    <section className="w-full max-w-5xl mx-auto  p-6 space-y-16 shadow-xl rounded-lg  flex flex-col justify-between h-screen   ">
+    <section className="w-full max-w-5xl mx-auto  p-6 space-y-16 shadow-xl rounded-lg  flex flex-wrap flex-col justify-between h-screen   ">
       {/* About Me Section */}
       <div className=" flex-1 overflow-auto   bg-gray-950 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-slate-800">
         <h2 className="text-3xl font-mono text-white text-center mb-6">About Me</h2>
