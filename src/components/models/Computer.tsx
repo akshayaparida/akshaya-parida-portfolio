@@ -21,7 +21,7 @@ export default function Computer(props: ComputerProps) {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
-        setScale([0.02, 0.02, 0.02]) // Scale down for mobile devices
+        setScale([0.03, 0.03, 0.03]) // Scale down for mobile devices
       } else {
         setScale([0.05, 0.05, 0.05]) // Default scale for larger screens
       }
