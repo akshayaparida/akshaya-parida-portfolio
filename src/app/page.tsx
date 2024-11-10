@@ -27,7 +27,7 @@ export default async function Home() {
         <Header currentDate={currentDate} />
         
         {/* 3D Model */}
-        <RenderModel className="">
+        <RenderModel >
           <Computer />
         </RenderModel>
 

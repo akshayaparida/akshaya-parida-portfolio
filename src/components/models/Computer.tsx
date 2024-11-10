@@ -1,7 +1,6 @@
-// src/components/Computer.tsx
 "use client"
 
-import React, { useRef } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GroupProps } from '@react-three/fiber'
 import * as THREE from 'three'
@@ -15,6 +14,24 @@ export default function Computer(props: ComputerProps) {
   const modelRef = useRef<THREE.Group>(null)
 
   const { nodes, materials } = useGLTF('/models/computer.glb')
+
+  const [scale, setScale] = useState<[number, number, number]>([0.05, 0.05, 0.05]) // Corrected type
+
+  // Adjust scale based on window size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setScale([0.02, 0.02, 0.02]) // Scale down for mobile devices
+      } else {
+        setScale([0.05, 0.05, 0.05]) // Default scale for larger screens
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+    handleResize() // Initial scale adjustment
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   useFrame((state) => {
     if (modelRef.current) {
@@ -30,7 +47,7 @@ export default function Computer(props: ComputerProps) {
       {...props}
       ref={modelRef}
       position={[0, -0.5, 0]}
-      scale={[0.05, 0.05, 0.05]}
+      scale={scale} // Use dynamic scale here
       rotation={[0.20, 0, 0]}
       dispose={null}
     >

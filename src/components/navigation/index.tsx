@@ -28,8 +28,8 @@ const Navigation = () => {
   }, []);
 
   return (
-    <nav ref={navRef} className="w-full py-2 mb-[4rem] ">
-      <div className="flex items-center justify-center gap-6">
+    <nav ref={navRef} className=" w-full py-2 mb-[4rem]   ">
+      <div className="  flex flex-wrap  md:flex-row items-center justify-center gap-6">
         {BtnList.map((btn, index) => (
           <NavButton
             key={index}

@@ -27,6 +27,7 @@ export interface ProjectListProps {
 export interface HomeBtnProps {
   newTab?: boolean;
   size?: number;
+  className?: string; 
 }
 
 // Define the type for a navigation button item
