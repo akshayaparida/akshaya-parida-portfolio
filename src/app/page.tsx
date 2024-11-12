@@ -24,7 +24,7 @@ export default async function Home() {
       {/* Model and Navigation Container */}
       <div className="w-full h-screen flex flex-col items-center justify-center">
         {/* Pass currentDate as a prop to Header */}
-        <Header currentDate={currentDate} />
+        <Header  />
         
         {/* 3D Model */}
         <RenderModel >

@@ -3,24 +3,25 @@
 import React, { useState, useEffect } from "react";
 import { MapPin, Clock } from "lucide-react";
 
-interface HeaderProps {
-  currentDate: string;
-}
-
-const Header: React.FC<HeaderProps> = ({ currentDate }) => {
+const Header: React.FC = () => {
+  const [currentDate, setCurrentDate] = useState<string | null>(null);
   const [currentTime, setCurrentTime] = useState<string | null>(null);
 
-  // Update current time every second
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentTime(new Date().toLocaleTimeString());
+      const now = new Date();
+      // Format date as dd/mm/yyyy
+      setCurrentDate(now.toLocaleDateString("en-GB")); // en-GB locale for dd/mm/yyyy format
+      setCurrentTime(now.toLocaleTimeString());
     }, 1000);
 
-    // Set initial time immediately
-    setCurrentTime(new Date().toLocaleTimeString());
+    // Set initial date and time immediately
+    const now = new Date();
+    setCurrentDate(now.toLocaleDateString("en-GB"));
+    setCurrentTime(now.toLocaleTimeString());
 
     return () => clearInterval(timer);
-  }, []); // Empty dependency array to run only once when the component mounts
+  }, []);
 
   return (
     <header className="w-full text-center text-white z-10 mt-[2rem]">
@@ -28,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ currentDate }) => {
         Hey, I&apos;m Akshaya Parida
       </h1>
       <h2 className="mt-2 text-2xl sm:text-3xl lg:text-3xl font-thin">Frontend Developer</h2>
-      <p className="mt-4 text-xs  lg:text-xl flex justify-center gap-8 opacity-55">
+      <p className="mt-4 text-xs lg:text-xl flex justify-center gap-8 opacity-55">
         <span className="flex items-center gap-2">
           <MapPin size={20} />
           <span>Bangalore, India</span>
