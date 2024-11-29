@@ -62,7 +62,7 @@ export const BtnList = [
   },
   {
     label: "LinkedIn",
-    link: "https://www.linkedin.com/in/akshaya-parida-aa152a26a/",
+    link: "https://www.linkedin.com/in/akshaya-parida-7036a426a/",
     icon: Linkedin, 
     newTab: true,
   },
