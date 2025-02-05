@@ -28,11 +28,11 @@ const Header: React.FC = () => {
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-mono animate-fadeInFloat">
         Hey, I&apos;m Akshaya Parida
       </h1>
-      <h2 className="mt-2 text-2xl sm:text-3xl lg:text-3xl font-thin">Frontend Developer</h2>
+      <h2 className="mt-2 text-2xl sm:text-3xl lg:text-3xl font-thin">Fullstack Developer</h2>
       <p className="mt-4 text-xs lg:text-xl flex justify-center gap-8 opacity-55">
         <span className="flex items-center gap-2">
           <MapPin size={20} />
-          <span>Bangalore, India</span>
+          <span>brahmapur,Odisha,India</span>
         </span>
         <span className="flex items-center gap-2">
           <Clock size={20} />
