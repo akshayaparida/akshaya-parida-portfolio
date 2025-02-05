@@ -32,7 +32,7 @@ const Header: React.FC = () => {
       <p className="mt-4 text-xs lg:text-xl flex justify-center gap-8 opacity-55">
         <span className="flex items-center gap-2">
           <MapPin size={20} />
-          <span>brahmapur,Odisha,India</span>
+          <span>Brahmapur, Odisha, India</span>
         </span>
         <span className="flex items-center gap-2">
           <Clock size={20} />
